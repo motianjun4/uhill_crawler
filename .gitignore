@@ -2,3 +2,4 @@ venv
 .vscode
 secret.env
 export.csv
+__pycache__
