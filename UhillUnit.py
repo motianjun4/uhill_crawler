@@ -41,7 +41,8 @@ class UhillUnit():
         flattend = list(map(mapUnits, units))
         return flattend
     
-    def write_csv(self, data):
+    @staticmethod
+    def write_csv(data):
         import csv
         csv_columns = ['#', 'price', 'available_on', 'bedroom', 'floorplan_name', 'area']
         with open('./export.csv', 'w') as csvfile:
@@ -49,7 +50,9 @@ class UhillUnit():
             writer.writeheader()
             for data in data:
                 writer.writerow(data)
-        return "./export.csv"
+        with open('./export.csv', 'r') as f:
+            txt = f.read()
+        return ("./export.csv", txt)
         
 if __name__ == "__main__":
     a = UhillUnit()
