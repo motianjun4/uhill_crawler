@@ -1,0 +1,5 @@
+fastapi==0.75.0
+python-dotenv==0.19.2
+uvicorn==0.17.6
+google-cloud-storage
+aiogram
